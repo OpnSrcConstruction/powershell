@@ -39,3 +39,6 @@ function lt {lsd --tree}  # Builds a colorful tree view.
 # dust is a du(directory-usage) alternative.
 New-Alias -Name "du" -Value "dust"
 New-Alias -Name "df" -Value "duf"
+
+function gdu { gdu --si } # -si makes for more human readable gdu output.
+New-Alias -Name "nf" -Value "neofetch.cmd" # Another great colorful utility for terminal cred.
