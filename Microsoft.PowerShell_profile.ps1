@@ -34,11 +34,19 @@ function lt {lsd --tree}  # Builds a colorful tree view.
 # Careful only to use lt in directories w/o many levels,
 # because it could be quite slow.
 # for example git project directories.
+function ldd { lsd --human-readable --directory-only --all }
+
+# I like using the up command to go up a level on the tree.
+function up{cd ..}
 
 # Rust utilities:
 # dust is a du(directory-usage) alternative.
 New-Alias -Name "du" -Value "dust"
 New-Alias -Name "df" -Value "duf"
 
-function gdu { gdu --si } # -si makes for more human readable gdu output.
+function tmux { wsl -d posh_tmux tmux } # Alpine container w/ default user set to tmux.
+# eventually that tmux will point to my PS Sessions adding a highly configured tmux system...
+New-Alias -Name "t" -Value "tmux"
+
+function gdu { gdu --si } # -si makes for more human readable gdu output
 New-Alias -Name "nf" -Value "neofetch.cmd" # Another great colorful utility for terminal cred.
